@@ -29,6 +29,18 @@ namespace Counter.Tests
     }
 
     [TestMethod]
+    public void RepeatCounterConstructor_CheckAllNumericalAndSpecialCharacterInputsAccepted_SameString()
+    {
+      string word = "hI!";
+      string sentence = "h3lLO!! wOR1d?";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      string expectedWord = "hi!";
+      string expectedSentence = "h3llo!! wor1d?";
+      Assert.AreEqual(expectedWord, newCounter.Word);
+      Assert.AreEqual(expectedSentence, newCounter.Sentence);
+    }
+
+    [TestMethod]
     public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_TrimmedString()
     {
       string word = "   white ";
