@@ -9,19 +9,14 @@ namespace Counter.Models
     public int Count {get; set; }
     public RepeatCounter(string word, string sentence)
     {
-      Word = word.ToLower();
-      Sentence = sentence.ToLower();
+      Word = word.ToLower().Trim();
+      Sentence = sentence.ToLower().Trim();
       Count = 0;
-    }
-
-    public string TrimWhiteSpace(string input)
-    {
-      return input.Trim();
     }
 
     public bool CheckIfEmpty()
     {
-      if (TrimWhiteSpace(Word) == "" || TrimWhiteSpace(Sentence) == "")
+      if (Word == "" || Sentence == "")
       {
         return true;
       }
@@ -45,7 +40,14 @@ namespace Counter.Models
 
     public int CountRepeats()
     {
-      
+      string[] splitSentence = GetSplitString(Sentence);
+      foreach (string word in splitSentence)
+      {
+        if (word == Word)
+        {
+          Count++;
+        }
+      }
       return Count;
     }
   }

@@ -41,15 +41,13 @@ namespace Counter.Tests
     }
 
     [TestMethod]
-    public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_TrimmedString()
+    public void RepeatCounterConstructor_ReturnStringWithoutWhiteSpaces_TrimmedString()
     {
       string word = "   white ";
       string sentence = "   spaces    ";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      string trimmedWord = newCounter.TrimWhiteSpace(word);
-      string trimmedSentence = newCounter.TrimWhiteSpace(sentence);
-      Assert.AreEqual("white", trimmedWord);
-      Assert.AreEqual("spaces", trimmedSentence);
+      Assert.AreEqual("white", newCounter.Word);
+      Assert.AreEqual("spaces", newCounter.Sentence);
     }
 
     [TestMethod]
