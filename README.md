@@ -1,4 +1,4 @@
-# _[Word Counter](https://github.com/TSiu88/WordCounter)_
+# _[Word Counter](https://github.com/TSiu88/WordCounter-Csharp)_
 
 #### _Week 9 Independent Friday Assignment for [Epicodus](https://www.epicodus.com/), 03.6.2020_
 
@@ -28,7 +28,7 @@ _README under construction_
 *This page may be viewed by:*
 
 1. Download and install .NET Core from the [official website](https://dotnet.microsoft.com/download/dotnet-core/)
-2. Clone the [repository](https://github.com/TSiu88/WordCounter.git) from my [GitHub page](https://github.com/TSiu88)
+2. Clone the [repository](https://github.com/TSiu88/WordCounter-Csharp.git) from my [GitHub page](https://github.com/TSiu88)
 3. Use a command line interface to move to the repository's directory with `cd project-directory`
 4. Run `dotnet run` to start up the program in the command line interface 
 
