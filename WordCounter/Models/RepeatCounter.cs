@@ -7,6 +7,11 @@ namespace Counter.Models
     public string Word { get; set; }
     public string Sentence { get; set; }
     public int Count {get; set; }
+
+    public RepeatCounter()
+    {
+
+    }
     public RepeatCounter(string word, string sentence)
     {
       Word = word.ToLower().Trim();
@@ -16,7 +21,7 @@ namespace Counter.Models
 
     public bool CheckIfEmpty(string input)
     {
-      if (input == "")
+      if (input.Trim() == "")
       {
         return true;
       }
@@ -28,9 +33,9 @@ namespace Counter.Models
       return input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
     }
 
-    public bool CheckForMultipleWords()
+    public bool CheckForMultipleWords(string input)
     {
-      string[] splitWord = GetSplitString(Word);
+      string[] splitWord = GetSplitString(input);
       if (splitWord.Length > 1)
       {
         return true;
@@ -38,9 +43,9 @@ namespace Counter.Models
       return false;
     }
 
-    public bool CheckIfSearchWordValid()
+    public bool CheckIfSearchWordValid(string input)
     {
-      if (CheckIfEmpty(Word) || CheckForMultipleWords())
+      if (CheckIfEmpty(input) || CheckForMultipleWords(input))
       {
         return false;
       }
