@@ -1,6 +1,6 @@
 # _[Word Counter](https://github.com/TSiu88/WordCounter-Csharp)_
 
-#### _Week 9 Independent Friday Assignment for [Epicodus](https://www.epicodus.com/), 03.6.2020_
+#### _Week 9 Independent Friday Assignment for [Epicodus](https://www.epicodus.com/), 03.06.2020_
 
 #### By _**Tiffany Siu**_
 
@@ -12,9 +12,8 @@ _README under construction_
 ## Setup/Installation Requirements
 
 ### Requirements to Run
-#### C#
 * _.NET Core_
-* _Command Prompt_
+* _Command Line Interface_
 
 <!-- #### Javascript
 * _Web Browser_
@@ -33,7 +32,6 @@ _README under construction_
 4. Run `dotnet run` to start up the program in the command line interface 
 
 ## Other Technologies Used
-#### C#
 * _C#_
 * _MSTest_
 * _Markdown_
@@ -54,41 +52,43 @@ _README under construction_
 
 ## Specifications
 
-<!-- * _List of features the program should do, from simplest to more complex, handling all possible cases.  Can do as text or put in table, with example input and output_
-  * _Example Input: expected input_
-  * _Example Output: expected output_
-* _Example: The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels._
-  * _Example Input: 3_
-  * _Example Output: 3_
-* _Example: The program adds "way" to single-letter words beginning with a vowel._
-  * _Example Input: i_
-  * _Example Output: iway_
-* _The program adds "way" to multi-letter words beginning with a vowel._
-  * _Example Input: open_
-  * _Example Output: openway_
-* _The program takes the single consonant from the beginning of the word and adds to the end with "ay"_
-  * _Example Input: latin_
-  * _Example Output: atinlay_
-* _The program takes all consecutive consonants from the beginning of the word and adds them to the end with "ay"_
-  * _Example Input: translator_
-  * _Example Output: anslatortray_
-* _The program takes beginning consonants and if it contains "q", also take the "u" after it and add them to the end with "ay"_
-  * _Example Input: squeal_
-  * _Example Output: ealsquay_
-* _Etc._ -->
+<!-- * _The program returns an error message if the input word or sentence is empty or only white spaces._
+  * _Example Input: word="", sentence=""_
+  * _Example Output: output="Missing input word or sentence. Please enter valid items into input to continue."_
+* _The program returns an error message if the input word for searching contains multiple words._
+  * _Example Input: word="hi hello"_
+  * _Example Output: output="Search word can only contain one word. Please try again."_
+* _The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive._
+  * _Example Input: "HeLlO"_
+  * _Example Output: "hello"_
+* _The program does not count extra whitespaces as part of the word it is searching for._
+  * _Example Input: input word="    white  "_
+  * _Example Output: word for search="white"_
+* _The program includes all numbers and special characters as part of the word it is searching for if given for input._
+  * _Example Input: input word="h3llo!"_
+  * _Example Output: word for search="h3llo!"_
+* _The program returns a count of zero if no full word matches found (separated with spaces from other characters in the sentence, including punctuation and special characters)._
+  * _Example Input: word="you", sentence="your you're joyous you!"_
+  * _Example Output: count=0_
+* _The program searches for full word matches only (separated by spaces from other characters in the sentence, including punctuation and special characters) and returns a count of the number of times it was found._
+  * _Example Input: word="hello" sentence="Hello! Hello and hello again. Hello."_
+  * _Example Output: count=2_
+ -->
 
-<!-- <details>
+<details>
   <summary>Click to expand to view specifications</summary>
 
 | Specification | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **The program displays welcome message and menu with prices** | Application start | Welcome message and menu displayed |
-| **The program displays special deals in readable format** | Application start | Special deals displayed ("Buy 2, get 1 free" "3 for $5") |
-| **The program takes input of user that is not an integer, then assume 0 ordered** | Bread="aaa", Pastry="" | Bread=0, Pastry=0 |
-| **The program takes number of loaves of bread and pastries and displays totals** | Bread=4, Pastry=4 | Bread=$20, Pastry=$8, Total=$28 |
-| **If input qualifies for special deals, costs calculated using discounted price** | Bread=3, Pastry=3 | Bread=$10, Pastry=$5, Total=$15 |
+| The program returns an error message if the input word or sentence is empty or only white spaces. | word="", sentence="" | output="Missing input word or sentence. Please enter valid items into input to continue." |
+| The program returns an error message if the input word for searching contains multiple words. | word="hi hello" | output="Search word can only contain one word. Please try again." |
+| The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive. | input word="HeLlO" | word for search="hello" |
+| The program does not count extra whitespaces as part of the word it is searching for. | input word="      white     " | word for search="white" |
+| The program includes all numbers and special characters as part of the word it is searching for if given for input. | input word="h3llo!" | word for search="h3llo!" |
+|The program returns a count of zero if no full word matches found (separated with spaces from other characters in the sentence, including punctuation and special characters). | word="you", sentence="your you're joyous you!" | count=0 |
+|The program searches for full word matches only (separated by spaces from other characters in the sentence, including punctuation and special characters) and returns a count of the number of times it was found. | word="hello" sentence="Hello! Hello and hello again. Hello." | count=2 |
 
-</details> -->
+</details>
 
 ## User Stories
 
