@@ -6,10 +6,12 @@ namespace Counter.Models
   {
     public string Word { get; set; }
     public string Sentence { get; set; }
+    public int Count {get; set; }
     public RepeatCounter(string word, string sentence)
     {
       Word = word.ToLower();
       Sentence = sentence.ToLower();
+      Count = 0;
     }
 
     public string TrimWhiteSpace(string input)
@@ -41,6 +43,10 @@ namespace Counter.Models
       return false;
     }
 
-    
+    public int CountRepeats()
+    {
+      
+      return Count;
+    }
   }
 }

@@ -82,6 +82,24 @@ namespace Counter.Tests
       Assert.AreEqual(true, result);
     }
 
-    
+    [TestMethod]
+    public void CountRepeats_Return0IfFullWordNotFound_0()
+    {
+      string word = "you";
+      string sentence = "your you're joyous you!";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      int result = newCounter.CountRepeats();
+      Assert.AreEqual(0, result);
+    }
+
+    [TestMethod]
+    public void CountRepeats_ReturnCountIfFullWordFound_2()
+    {
+      string word = "Hello";
+      string sentence = "Hello! Hello and hello again. Hello.";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      int result = newCounter.CountRepeats();
+      Assert.AreEqual(2, result);
+    }
   }
 }
