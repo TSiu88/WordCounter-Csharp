@@ -16,7 +16,7 @@ namespace Counter.Models
     {
       return input.Trim();
     }
-    
+
     public bool CheckIfEmpty()
     {
       if (TrimWhiteSpace(Word) == "" || TrimWhiteSpace(Sentence) == "")
@@ -26,6 +26,14 @@ namespace Counter.Models
       return false;
     }
 
-    
+    public bool CheckForMultipleWords()
+    {
+      string[] splitWord = Word.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+      if (splitWord.Length > 1)
+      {
+        return true;
+      }
+      return false;
+    }
   }
 }

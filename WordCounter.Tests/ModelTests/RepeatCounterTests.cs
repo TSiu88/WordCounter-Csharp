@@ -38,6 +38,14 @@ namespace Counter.Tests
       Assert.AreEqual(true, result);
     }
 
-    
+    [TestMethod]
+    public void CheckForMultipleWords_IfSearchWordHasMultipleWordsReturnTrue_True()
+    {
+      string word = "one    two";
+      string sentence = "three four";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      bool result = newCounter.CheckForMultipleWords();
+      Assert.AreEqual(true, result);
+    }
   }
 }
