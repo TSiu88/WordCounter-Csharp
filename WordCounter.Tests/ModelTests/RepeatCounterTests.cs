@@ -19,7 +19,7 @@ namespace Counter.Tests
     [TestMethod]
     public void CheckIfEmpty_IfInputWordOrSentenceEmptyReturnTrue_True()
     {
-      string word = "";
+      string word = "   ";
       string sentence = "";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
       bool result = newCounter.CheckIfEmpty();

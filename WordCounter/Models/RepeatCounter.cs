@@ -14,6 +14,10 @@ namespace Counter.Models
 
     public bool CheckIfEmpty()
     {
+      if (Word.Trim() == "" || Sentence.Trim() == "")
+      {
+        return true;
+      }
       return false;
     }
   }
