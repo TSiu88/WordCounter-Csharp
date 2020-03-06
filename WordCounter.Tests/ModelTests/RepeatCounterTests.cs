@@ -78,7 +78,7 @@ namespace Counter.Tests
       string word = "one    two";
       string sentence = "three four";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      bool result = newCounter.CheckForMultipleWords();
+      bool result = newCounter.CheckForMultipleWords(newCounter.Word);
       Assert.AreEqual(true, result);
     }
 
@@ -88,7 +88,7 @@ namespace Counter.Tests
       string word = "one ";
       string sentence = "three point one four one";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      bool result = newCounter.CheckIfSearchWordValid();
+      bool result = newCounter.CheckIfSearchWordValid(newCounter.Word);
       Assert.AreEqual(true, result);
     }
 
