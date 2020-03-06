@@ -17,7 +17,19 @@ namespace Counter.Tests
     }
 
     [TestMethod]
-    public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_String()
+    public void RepeatCounterConstructor_CheckConvertedToLowerCaseWhenConstructed_LowerCaseStrings()
+    {
+      string word = "hI";
+      string sentence = "hElLO wORld";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      string expectedWord = "hi";
+      string expectedSentence = "hello world";
+      Assert.AreEqual(expectedWord, newCounter.Word);
+      Assert.AreEqual(expectedSentence, newCounter.Sentence);
+    }
+
+    [TestMethod]
+    public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_TrimmedString()
     {
       string word = "   white ";
       string sentence = "   spaces    ";
@@ -47,5 +59,7 @@ namespace Counter.Tests
       bool result = newCounter.CheckForMultipleWords();
       Assert.AreEqual(true, result);
     }
+
+    
   }
 }

@@ -8,8 +8,8 @@ namespace Counter.Models
     public string Sentence { get; set; }
     public RepeatCounter(string word, string sentence)
     {
-      Word = word;
-      Sentence = sentence;
+      Word = word.ToLower();
+      Sentence = sentence.ToLower();
     }
 
     public string TrimWhiteSpace(string input)

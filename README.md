@@ -40,10 +40,10 @@ _README under construction_
 
 | Specification | Input | Output | Reason for Input Choice |
 | :-------------     | :------------- | :------------- | :------------ |
+| The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive. | input word="HeLlO" | word for search="hello" | Input contains upper and lower case letters |
 | The program does not count extra whitespaces as part of the word it is searching for. | input word="      white     " | word for search="white" | Input has extra whitespaces |
 | The program returns an error message if the input word or sentence is empty or only contains white spaces. | word="", sentence="" | output="Missing input word or sentence. Please enter valid items into input to continue." | Input is empty |
 | The program returns an error message if the input word for searching contains multiple words. | word="hi hello" | output="Search word can only contain one word. Please try again." | Multiple word input not allowed for search |
-| The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive. | input word="HeLlO" | word for search="hello" | Input contains upper and lower case letters |
 | The program includes all numbers and special characters as part of the word it is searching for if given for input. | input word="h3llo!" | word for search="h3llo!" | Input contains number and punctuation characters |
 |The program returns a count of zero if no full word matches found (separated with spaces from other characters in the sentence, including punctuation and special characters). | word="you", sentence="your you're joyous you!" | count=0 | Input has different examples of non full word matches |
 |The program searches for full word matches only (separated by spaces from other characters in the sentence, including punctuation and special characters) and returns a count of the number of times it was found. | word="hello" sentence="Hello! Hello and hello again. Hello." | count=2 | Input has a mixture of full word matches and non matches |
