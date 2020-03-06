@@ -12,18 +12,20 @@ namespace Counter.Models
       Sentence = sentence;
     }
 
+    public string TrimWhiteSpace(string input)
+    {
+      return input.Trim();
+    }
+    
     public bool CheckIfEmpty()
     {
-      if (Word.Trim() == "" || Sentence.Trim() == "")
+      if (TrimWhiteSpace(Word) == "" || TrimWhiteSpace(Sentence) == "")
       {
         return true;
       }
       return false;
     }
 
-    public string TrimWhiteSpace(string input)
-    {
-      return "";
-    }
+    
   }
 }

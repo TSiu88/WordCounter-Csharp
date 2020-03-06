@@ -40,8 +40,8 @@ _README under construction_
 
 | Specification | Input | Output | Reason for Input Choice |
 | :-------------     | :------------- | :------------- | :------------ |
-| The program returns an error message if the input word or sentence is empty or only contains white spaces. | word="", sentence="" | output="Missing input word or sentence. Please enter valid items into input to continue." | Input is empty |
 | The program does not count extra whitespaces as part of the word it is searching for. | input word="      white     " | word for search="white" | Input has extra whitespaces |
+| The program returns an error message if the input word or sentence is empty or only contains white spaces. | word="", sentence="" | output="Missing input word or sentence. Please enter valid items into input to continue." | Input is empty |
 | The program returns an error message if the input word for searching contains multiple words. | word="hi hello" | output="Search word can only contain one word. Please try again." | Multiple word input not allowed for search |
 | The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive. | input word="HeLlO" | word for search="hello" | Input contains upper and lower case letters |
 | The program includes all numbers and special characters as part of the word it is searching for if given for input. | input word="h3llo!" | word for search="h3llo!" | Input contains number and punctuation characters |

@@ -17,16 +17,6 @@ namespace Counter.Tests
     }
 
     [TestMethod]
-    public void CheckIfEmpty_IfInputWordOrSentenceEmptyOrWhiteSpaceReturnTrue_True()
-    {
-      string word = "   ";
-      string sentence = "";
-      RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      bool result = newCounter.CheckIfEmpty();
-      Assert.AreEqual(true, result);
-    }
-
-    [TestMethod]
     public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_String()
     {
       string word = "   white ";
@@ -37,5 +27,17 @@ namespace Counter.Tests
       Assert.AreEqual("white", trimmedWord);
       Assert.AreEqual("spaces", trimmedSentence);
     }
+
+    [TestMethod]
+    public void CheckIfEmpty_IfInputWordOrSentenceEmptyOrWhiteSpaceReturnTrue_True()
+    {
+      string word = "   ";
+      string sentence = "";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      bool result = newCounter.CheckIfEmpty();
+      Assert.AreEqual(true, result);
+    }
+
+    
   }
 }
