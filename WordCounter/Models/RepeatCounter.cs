@@ -4,10 +4,17 @@ namespace Counter.Models
 {
   public class RepeatCounter
   {
-    public string Property { get; set; }
-    public RepeatCounter(string property)
+    public string Word { get; set; }
+    public string Sentence { get; set; }
+    public RepeatCounter(string word, string sentence)
     {
-      Property = property;
+      Word = word;
+      Sentence = sentence;
+    }
+
+    public bool CheckIfEmpty()
+    {
+      return false;
     }
   }
 }
