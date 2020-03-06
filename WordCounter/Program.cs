@@ -48,6 +48,8 @@ class Program
 
   private static void PrintOutput(RepeatCounter counter)
   {
-    
+    Console.WriteLine($"Word to match: {counter.Word}");
+    Console.WriteLine($"Sentence to search: {counter.Sentence}");
+    Console.WriteLine($"Full Matches Found: {counter.CountRepeats()}");
   }
 }
