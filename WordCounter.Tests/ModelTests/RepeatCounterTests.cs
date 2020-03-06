@@ -17,13 +17,25 @@ namespace Counter.Tests
     }
 
     [TestMethod]
-    public void CheckIfEmpty_IfInputWordOrSentenceEmptyReturnTrue_True()
+    public void CheckIfEmpty_IfInputWordOrSentenceEmptyOrWhiteSpaceReturnTrue_True()
     {
       string word = "   ";
       string sentence = "";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
       bool result = newCounter.CheckIfEmpty();
       Assert.AreEqual(true, result);
+    }
+
+    [TestMethod]
+    public void TrimWhiteSpace_ReturnStringWithoutWhiteSpaces_String()
+    {
+      string word = "   white ";
+      string sentence = "   spaces    ";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      string trimmedWord = newCounter.TrimWhiteSpace(word);
+      string trimmedSentence = newCounter.TrimWhiteSpace(sentence);
+      Assert.AreEqual("white", trimmedWord);
+      Assert.AreEqual("spaces", trimmedSentence);
     }
   }
 }

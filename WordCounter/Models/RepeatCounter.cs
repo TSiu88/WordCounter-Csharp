@@ -20,5 +20,10 @@ namespace Counter.Models
       }
       return false;
     }
+
+    public string TrimWhiteSpace(string input)
+    {
+      return "";
+    }
   }
 }
