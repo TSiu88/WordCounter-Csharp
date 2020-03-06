@@ -5,16 +5,20 @@ class Program
 {
   static void Main()
   {
-    Console.WriteLine(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.");
-    Console.WriteLine("                                WORD COUNTER");
-    Console.WriteLine("  This Word Counter will find the frequency of a word in a sentence!");
-    Console.WriteLine(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.");
+    PrintIntro();
     string word = GetWordInput();
     string sentence = GetSentenceInput();
     RepeatCounter counter = new RepeatCounter(word, sentence);
     PrintOutput(counter);
   }
 
+  private static void PrintIntro()
+  {
+    Console.WriteLine(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.");
+    Console.WriteLine("                                WORD COUNTER");
+    Console.WriteLine("  This Word Counter will find the frequency of a word in a sentence!");
+    Console.WriteLine(".:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.");
+  }
   private static string GetWordInput()
   {
     RepeatCounter tester = new RepeatCounter();

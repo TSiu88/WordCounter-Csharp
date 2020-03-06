@@ -1,9 +1,27 @@
 # _[Word Counter](https://github.com/TSiu88/WordCounter-Csharp)_
 
+![LastCommit](https://img.shields.io/github/last-commit/tsiu88/wordcounter-csharp)
+![Languages](https://img.shields.io/github/languages/top/tsiu88/wordcounter-csharp)
+[![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://lbesson.mit-license.org/)
+
 #### _Week 9 Independent Friday Assignment for [Epicodus](https://www.epicodus.com/), 03.06.2020_
 
 #### By _**Tiffany Siu**_
-
+---
+## Table of Contents
+1. [Description](#description)
+2. [Setup/Installation Requirements](#setup/installation-requirements)
+    - [Requirements to Run](#requirements-to-run)
+    - [Instructions](#instructions)
+    - [Other Technologies Used](#other-technologies-used)
+3. [Notable Features](#notable-features)
+4. [Specifications](#specifications)
+5. [Screenshots](#screenshots)
+6. [Test Case Example](#test-case-example)
+7. [Known Bugs](#known-bugs)
+8. [Support and Contact Details](#support-and-contact-details)
+9. [License](#license)
+---
 ## Description
 
 _README under construction_
@@ -25,7 +43,7 @@ _README under construction_
 4. Run `dotnet restore wordcounter` and `dotnet restore wordcounter.tests` to create obj and bin folders for program to run in the command line interface
 5. Run `dotnet run` to start up the program in the command line interface 
 
-## Other Technologies Used
+### Other Technologies Used
 * _C#_
 * _MSTest_
 * _Markdown_
@@ -43,20 +61,12 @@ _README under construction_
 | The program converts all inputs to be in lowercase for comparisons to find matches so searching for matches is case insensitive. | input word="HeLlO" | word for search="hello" | Input contains upper and lower case letters |
 | The program includes all numbers and special characters as part of the word it is searching for if given for input. | input word="h3llo!" | word for search="h3llo!" | Input contains number and punctuation characters |
 | The program does not count extra whitespaces as part of the word it is searching for. | input word="      white     " | word for search="white" | Input has extra whitespaces |
-| The program returns an error message if the input word or sentence is empty or only contains white spaces. | word="", sentence="" | output="Missing input word or sentence. Please enter valid items into input to continue." | Input is empty |
-| The program returns an error message if the input word for searching contains multiple words. | word="hi hello" | output="Search word can only contain one word. Please try again." | Multiple word input not allowed for search |
+| The program returns an error message if the input word or sentence is empty or only contains white spaces then asks again for input. | word="", sentence="" | output="Empty or multiple words to match not valid.  Please try again." OR output="Empty sentence to search not valid.  Please try again." | Input is empty |
+| The program returns an error message if the input word for searching contains multiple words. | word="hi hello" | output="Empty or multiple words to match not valid.  Please try again." | Multiple word input not allowed for search |
 |The program returns a count of zero if no full word matches found (separated with spaces from other characters in the sentence, including punctuation and special characters). | word="you", sentence="your you're joyous you!" | count=0 | Input has different examples of non full word matches |
 |The program searches for full word matches only (separated by spaces from other characters in the sentence, including punctuation and special characters) and returns a count of the number of times it was found. | word="hello" sentence="Hello! Hello and hello again. Hello." | count=2 | Input has a mixture of full word matches and non matches |
 
 </details>
-
-## User Stories
-
-<!-- * As a scheduler, I want to be able to organize nurses vacation schedules without much paperwork so that I can be more efficient.
-* As a scheduler, I want to see a list of requests with the overlapping dates and the nurses that sent in the requests organized by priority so I can see which staff member should have priority in getting the request approved. -->
-
-<!-- * Give stories for people who will use this project and what they'd want it to do.  Can include customers/end users, programmers that maintain code, etc. -->
-
 
 ## Screenshots
 
@@ -82,7 +92,7 @@ _Some example tests:_
 
 _There are currently no known bugs in this program_
 
-## Support and contact details
+## Support and Contact Details
 
 _If there are any question or concerns please contact me at my [email](mailto:tsiu88@gmail.com). Thank you._
 
