@@ -56,17 +56,19 @@ namespace Counter.Tests
       string word = "   ";
       string sentence = "";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      bool result = newCounter.CheckIfEmpty();
-      Assert.AreEqual(true, result);
+      bool wordResult = newCounter.CheckIfEmpty(newCounter.Word);
+      bool sentenceResult = newCounter.CheckIfEmpty(newCounter.Sentence);
+      Assert.AreEqual(true, wordResult);
+      Assert.AreEqual(true, sentenceResult);
     }
 
     [TestMethod]
     public void GetSplitString_ReturnStringArrayOfWords_StringArray()
     {
       string word = "one";
-      string sentence = "three one four two one!";
+      string sentence = "three point one four one five!";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
-      string[] expected = new string[5] {"three", "one", "four", "two", "one!"};
+      string[] expected = new string[6] {"three", "point", "one", "four", "one", "five!"};
       CollectionAssert.AreEquivalent(expected, newCounter.GetSplitString(sentence));
     }
 
@@ -77,6 +79,16 @@ namespace Counter.Tests
       string sentence = "three four";
       RepeatCounter newCounter = new RepeatCounter(word, sentence);
       bool result = newCounter.CheckForMultipleWords();
+      Assert.AreEqual(true, result);
+    }
+
+    [TestMethod]
+    public void CheckIfSearchWordValid_ReturnTrueIfNotEmptyAndSingleWord_True()
+    {
+      string word = "one ";
+      string sentence = "three point one four one";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      bool result = newCounter.CheckIfSearchWordValid();
       Assert.AreEqual(true, result);
     }
 

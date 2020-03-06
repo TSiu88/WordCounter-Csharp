@@ -14,9 +14,9 @@ namespace Counter.Models
       Count = 0;
     }
 
-    public bool CheckIfEmpty()
+    public bool CheckIfEmpty(string input)
     {
-      if (Word == "" || Sentence == "")
+      if (input == "")
       {
         return true;
       }
@@ -38,6 +38,14 @@ namespace Counter.Models
       return false;
     }
 
+    public bool CheckIfSearchWordValid()
+    {
+      if (CheckIfEmpty(Word) || CheckForMultipleWords())
+      {
+        return false;
+      }
+      return true;
+    }
     public int CountRepeats()
     {
       string[] splitSentence = GetSplitString(Sentence);
