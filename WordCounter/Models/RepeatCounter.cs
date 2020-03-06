@@ -26,14 +26,21 @@ namespace Counter.Models
       return false;
     }
 
+    public string[] GetSplitString(string input)
+    {
+      return input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    }
+
     public bool CheckForMultipleWords()
     {
-      string[] splitWord = Word.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+      string[] splitWord = GetSplitString(Word);
       if (splitWord.Length > 1)
       {
         return true;
       }
       return false;
     }
+
+    
   }
 }

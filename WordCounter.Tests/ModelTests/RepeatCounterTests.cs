@@ -63,6 +63,16 @@ namespace Counter.Tests
     }
 
     [TestMethod]
+    public void GetSplitString_ReturnStringArrayOfWords_StringArray()
+    {
+      string word = "one";
+      string sentence = "three one four two one!";
+      RepeatCounter newCounter = new RepeatCounter(word, sentence);
+      string[] expected = new string[5] {"three", "one", "four", "two", "one!"};
+      CollectionAssert.AreEquivalent(expected, newCounter.GetSplitString(sentence));
+    }
+
+    [TestMethod]
     public void CheckForMultipleWords_IfSearchWordHasMultipleWordsReturnTrue_True()
     {
       string word = "one    two";
