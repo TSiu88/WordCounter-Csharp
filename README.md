@@ -1,4 +1,4 @@
-# _[Word Counter](https://github.com/TSiu88/WordCounter-Csharp)_
+# _[C# Word Counter](https://github.com/TSiu88/WordCounter-Csharp)_
 
 ![LastCommit](https://img.shields.io/github/last-commit/tsiu88/wordcounter-csharp)
 ![Languages](https://img.shields.io/github/languages/top/tsiu88/wordcounter-csharp)
@@ -24,8 +24,9 @@
 ---
 ## Description
 
-_README under construction_
-<!-- _Detailed desc w/ purpose/usage, what does, motivation to create, why exists, other info for users/developers to have_ -->
+This application is the Week 9 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course.  This is a program made to show creating coded tests in C# and following a Red, Green, Refactor workflow to create a clear, tested product with DRY code.
+
+This program is a console application that allows a user to enter a word and a sentence.  From these two inputs the program would count the amount of times a word appeared in the sentence if it is given inputs that are both valid.  A word is considered valid if it is not empty or only whitespace and only consists of a single word.  A sentence is considered valid if it is not empty or only whitespace.  The program only checks for case insensitive, full word matches so it does not count a match if the word is connected to other special characters like punctuation or is part of another word.  For example if the word was "hero", the words "hero!", "heroes", or "switcheroo" are not considered matches.
 
 ## Setup/Installation Requirements
 
@@ -40,8 +41,7 @@ _README under construction_
 1. Download and install .NET Core from the [official website](https://dotnet.microsoft.com/download/dotnet-core/)
 2. Clone the [repository](https://github.com/TSiu88/WordCounter-Csharp.git) from my [GitHub page](https://github.com/TSiu88)
 3. Use a command line interface to move to the repository's directory with `cd project-directory`
-4. Run `dotnet restore wordcounter` and `dotnet restore wordcounter.tests` to create obj and bin folders for program to run in the command line interface
-5. Run `dotnet run` to start up the program in the command line interface 
+4. Run `dotnet run` to start up the program in the command line interface 
 
 ### Other Technologies Used
 * _C#_
@@ -49,7 +49,7 @@ _README under construction_
 * _Markdown_
 
 ## Notable Features
-<!-- _features that make project stand out_ -->
+For this project I followed the Red, Green, Refactor workflow completely for the entire program.  I also used several visual and formatting items in the README that are new to me including badges, collapsible sections, and a Table of Contents.
 
 ## Specifications
 
@@ -70,23 +70,22 @@ _README under construction_
 
 ## Screenshots
 
-<!-- _Here is a snippet of what the input looks like:_
+_Here are some snippets for examples of what it looks like:_
 
-![Snippet of input fields](img/snippet1.png)
+![Snippet of example 1 with full word examples](WordCounter/img/snippet3.png)
 
-_Here is a preview of what the output looks like:_
+![Snippet of example 2 with invalid search word](WordCounter/img/snippet1.png)
 
-![Snippet of output box](img/snippet2.png) -->
-
-<!-- _{Show pictures using ![alt text](image.jpg), show what library does as concisely as possible but don't need to explain how project solves problem from `code`_ -->
+![Snippet of example 3 with empty entries](WordCounter/img/snippet2.png)
 
 ## Test Case Example
-<!-- _Tests are done through Jest and are run from the command line prompt with `npm test`._
-_Some example tests:_
-![Snippet of an example test](img/test1.png)
 
-![Snippet of an example result](img/test2.png) -->
-<!-- _describe and show how to run tests with `code` examples}_ -->
+_Tests are done through MSTest in a separate directory (WordCounter.Tests) with a Tests.cs file and are run from the command line prompt with `dotnet test`._
+_Some example tests and results:
+
+![Snippet of an example test](WordCounter/img/tester1.png)
+
+![Snippet of an example result](WordCounter/img/tester2.png)
 
 ## Known Bugs
 
